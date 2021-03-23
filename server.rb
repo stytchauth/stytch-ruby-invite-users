@@ -8,14 +8,13 @@ Dotenv.load
 set :content_type,'application/json'
 
 get '/' do
-  erb :login_or_signup
+  erb :invite_user
 end
 
-post '/login-or-create-user' do
-  resp = client.login_or_create_user(
+post '/invite-user' do
+  resp = client.invite_by_email(
     email: params[:email],
-    login_magic_link_url: magic_link_url,
-    signup_magic_link_url: magic_link_url,
+    magic_link_url: magic_link_url,
   ).symbolize_keys
 
   if resp[:status_code] != 200
