@@ -18,6 +18,9 @@ Run `ruby ./server.rb`
 
 ##### 4. Login
 
-Visit `http://localhost:4567` and login with your email.
-Then check for the Stytch email and click the sign in button.
+Visit `http://localhost:4567` and send your user an invite.
+
+Since your own email is already on the project, you can invite an alias such as me+1@mydomain.com so that the request comes to your own email, me@mydomain.com.
+
+Then check for the Stytch email and click the Log in button.
 You should be signed in!
