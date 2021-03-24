@@ -1,4 +1,4 @@
-# stytch-ruby-magic-links
+# Invite users via magic link example
 
 ##### 1. Set ENV vars
 Set your project ID and secret in the `.env` file.
