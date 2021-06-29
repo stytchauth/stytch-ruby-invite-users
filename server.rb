@@ -12,9 +12,9 @@ get '/' do
 end
 
 post '/invite-user' do
-  resp = client.invite_by_email(
+  resp = client.magic_links.email.invite(
     email: params[:email],
-    magic_link_url: magic_link_url,
+    invite_magic_link_url: magic_link_url
   ).symbolize_keys
 
   if resp[:status_code] != 200
@@ -25,7 +25,7 @@ post '/invite-user' do
 end
 
 get '/authenticate' do
-  resp = client.authenticate_magic(
+  resp = client.magic_links.authenticate(
     token: params[:token]
   ).symbolize_keys
 
